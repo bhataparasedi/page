@@ -7,19 +7,17 @@
   <title>SEDI प्रशिक्षण संस्था</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Swiper JS for testimonial & certificate sliders -->
+  <!-- Swiper CSS -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
   />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  <!-- Lightbox CSS & JS -->
+  <!-- Lightbox CSS -->
   <link
     href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
     rel="stylesheet"
   />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
   <style>
     body {
@@ -47,31 +45,22 @@
         प्रशिक्षण ट्रेड
       </h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Single Trade Box -->
-        <div
-          class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
-        >
+        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
           <h3 class="text-xl font-semibold mb-2">रिटेल मैनजमेंट</h3>
           <p><strong>योग्यता:</strong> 12 वी</p>
           <p><strong>अवधि:</strong> 3 माह</p>
         </div>
-        <div
-          class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
-        >
+        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
           <h3 class="text-xl font-semibold mb-2">ब्यूटिशियन (मेकअप आर्टिस्ट)</h3>
           <p><strong>योग्यता:</strong> 10 वी</p>
           <p><strong>अवधि:</strong> 3 माह</p>
         </div>
-        <div
-          class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
-        >
+        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
           <h3 class="text-xl font-semibold mb-2">इलेक्ट्रीशियन</h3>
           <p><strong>योग्यता:</strong> 10 वी</p>
           <p><strong>अवधि:</strong> 4 माह</p>
         </div>
-        <div
-          class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
-        >
+        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
           <h3 class="text-xl font-semibold mb-2">डोमेस्टिक डाटा एंट्री (एम्प्लॉयब्लिटी स्किल्स)</h3>
           <p><strong>योग्यता:</strong> ग्रेजुएट</p>
           <p><strong>अवधि:</strong> 3 माह</p>
@@ -100,7 +89,7 @@
         <div class="swiper-wrapper">
           <!-- Sample Certificate 1 -->
           <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600x400.png?text=Certificate+Sample+1" data-lightbox="certificates" data-title="Certificate Sample 1">
+            <a href="https://via.placeholder.com/600x400?text=Certificate+Sample+1" data-lightbox="certificates" data-title="Certificate Sample 1">
               <img
                 src="https://i.postimg.cc/6p8FhSnc/Whats-App-Image-2025-06-09-at-12-29-38-PM.jpg"
                 alt="Certificate Sample 1"
@@ -110,7 +99,7 @@
           </div>
           <!-- Sample Certificate 2 -->
           <div class="swiper-slide">
-            <a href="https://via.placeholder.com/600x400.png?text=Certificate+Sample+2" data-lightbox="certificates" data-title="Certificate Sample 2">
+            <a href="https://via.placeholder.com/600x400?text=Certificate+Sample+2" data-lightbox="certificates" data-title="Certificate Sample 2">
               <img
                 src="https://i.postimg.cc/k59F5RJS/CAN-31959255-0dp46ergcdsa0f19-page-0001.jpg"
                 alt="Certificate Sample 2"
@@ -118,9 +107,55 @@
               />
             </a>
           </div>
-          <!-- Sample Certificate 3 -->
-                 </div>
+        </div>
         <!-- Pagination dots -->
+        <div class="swiper-pagination mt-4"></div>
+      </div>
+    </section>
+
+    <!-- Placement Cell Section (Added) -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-semibold mb-6 border-b-4 border-[#f4be20] inline-block pb-2">
+        प्लेसमेंट सेल      </h2>
+      <div class="swiper placementSwiper max-w-4xl mx-auto">
+        <div class="swiper-wrapper">
+          <!-- 7 Placement Slides -->
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/800x500?text=Placement+1" data-lightbox="placement" data-title="Placement 1">
+              <img src="https://i.postimg.cc/TYJyfDvb/7.png" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/800x500?text=Placement+2" data-lightbox="placement" data-title="Placement 2">
+              <img src="https://i.postimg.cc/ZnhRhTfj/8.png" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/800x500?text=Placement+3" data-lightbox="placement" data-title="Placement 3">
+              <img src="https://i.postimg.cc/PrTx35v5/9.png" alt="Placement 3" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/800x500?text=Placement+4" data-lightbox="placement" data-title="Placement 4">
+              <img src="https://i.postimg.cc/Gp8h8BVq/FFB712.png" alt="Placement 4" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/800x500?text=Placement+5" data-lightbox="placement" data-title="Placement 5">
+              <img src="https://i.postimg.cc/5y1xRs0R/11.png" alt="Placement 5" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com/800x500?text=Placement+6" data-lightbox="placement" data-title="Placement 6">
+              <img src="https://i.postimg.cc/mkwbf712/12.png" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="https://via.placeholder.com 800x500?text=Placement+7" data-lightbox="placement" data-title="Placement 7">
+              <img src="https://i.postimg.cc/yNZs6M3G/13.png" alt="Placement 7" class="rounded-lg shadow cursor-pointer hover:opacity-80 transition w-full" />
+            </a>
+          </div>
+        </div>
         <div class="swiper-pagination mt-4"></div>
       </div>
     </section>
@@ -133,12 +168,11 @@
       <div class="swiper mySwiper max-w-3xl mx-auto">
         <div class="swiper-wrapper">
           <div class="swiper-slide p-6 bg-white rounded-lg shadow-lg">
-            <p class="mb-4 italic">"इलेक्ट्रीशियन प्रशिक्षण ने मुझे जीवन में नई दिशा दी। अपनी प्लेसमेंट से मैं बेहद खुश हूँ। इस मुकाम तक पहुँचने में फैकल्टी और मोबिलाइज़र की भूमिका के लिए मैं SEDI का धन्यवाद करता हूँ।"</p>
+            <p class="mb-4 italic">"इलेक्ट्रिशियन प्रशिक्षण ने मुझे जीवन में नई दिशा दी। अपनी प्लेसमेंट से मैं बेहद खुश हूँ। इस मुकाम तक पहुँचने में फैकल्टी और मोबिलाइज़र की भूमिका के लिए मैं SEDI का धन्यवाद करता हूँ।"</p>
             <h3 class="font-bold text-[#004e87]">- हेम कुमार साहू</h3>
           </div>
           <div class="swiper-slide p-6 bg-white rounded-lg shadow-lg">
-            <p class="mb-4 italic">"SEDI में मिले प्रैक्टिकल प्रशिक्षण सत्र उद्योग की आवश्यकताओं को समझने में बेहद मददगार रहे। उन्हें INDO MIM जैसी प्रतिष्ठित कंपनी में काम करने का अवसर मिला, जिसके लिए उन्होंने केंद्र का धन्यवाद किया जिसने प्लेसमेंट प्रक्रिया में उनका मार्गदर्शन किया।"
-</p>
+            <p class="mb-4 italic">"SEDI में मिले प्रैक्टिकल प्रशिक्षण सत्र उद्योग की आवश्यकताओं को समझने में बेहद मददगार रहे। उन्हें INDO MIM जैसी प्रतिष्ठित कंपनी में काम करने का अवसर मिला, जिसके लिए उन्होंने केंद्र का धन्यवाद किया जिसने प्लेसमेंट प्रक्रिया में उनका मार्गदर्शन किया।"</p>
             <h3 class="font-bold text-[#004e87]">- बसंत ध्रुव</h3>
           </div>
           <div class="swiper-slide p-6 bg-white rounded-lg shadow-lg">
@@ -146,7 +180,6 @@
             <h3 class="font-bold text-[#004e87]">- राजा निषाद</h3>
           </div>
         </div>
-        <!-- Slider controls -->
         <div class="swiper-pagination mt-4"></div>
       </div>
     </section>
@@ -190,15 +223,10 @@
 
     <!-- Apply Button -->
     <section class="text-center mb-12">
-      <a
-        href="https://forms.gle/quazDYdTCs6sdQr89"
-        target="_blank"
-        class="inline-block bg-[#004e87] text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-[#003a6a] transition"
-        >अवेदन करें</a
-      >
+      <a href="https://forms.gle/quazDYdTCs6sdQr89" target="_blank" class="inline-block bg-[#004e87] text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-[#003a6a] transition">आवेदन करें</a>
     </section>
 
-    <!-- Contact & Location -->
+   <!-- Contact & Location -->
     <section class="mb-12 bg-white rounded-lg shadow-lg p-6 text-[#004e87]">
       <h2 class="text-3xl font-semibold mb-4 border-b-4 border-[#f4be20] inline-block pb-2">संपर्क करें</h2>
       <p>SEDI, पंचम दीवान स्कूल के अंदर, सेंट मैरी स्कूल रोड, भाटापारा (छ.ग.)</p>
@@ -210,37 +238,30 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-[#004e87] text-white text-center p-4">
-    © 2025 कौशल एवं उद्यमिता विकास संस्थान (SEDI)
-  </footer>
+  <footer class="bg-[#004e87] text-white text-center p-4">© 2025 कौशल एवं उद्यमिता विकास संस्थान (SEDI)</footer>
 
-  <!-- Initialize Swiper -->
+  <!-- Swiper & Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
   <script>
     const certificateSwiper = new Swiper('.certificateSwiper', {
       loop: true,
-      pagination: {
-        el: '.certificateSwiper .swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      spaceBetween: 20,
+      pagination: {el: '.certificateSwiper .swiper-pagination', clickable: true},
+      autoplay: {delay: 4000, disableOnInteraction: false},
+      slidesPerView: 1, spaceBetween: 20,
     });
-
+    const placementSwiper = new Swiper('.placementSwiper', {
+      loop: true,
+      pagination: {el: '.placementSwiper .swiper-pagination', clickable: true},
+      autoplay: {delay: 4000, disableOnInteraction: false},
+      slidesPerView: 1, spaceBetween: 20,
+    });
     const testimonialSwiper = new Swiper('.mySwiper', {
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 5000,
-      },
+      pagination: {el: '.swiper-pagination', clickable: true},
+      autoplay: {delay: 5000},
     });
   </script>
 </body>
-
 </html>
