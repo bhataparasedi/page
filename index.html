@@ -91,10 +91,51 @@
   </div>
 </section>
 
+
 <!-- Apply Button -->
-    <section class="text-center mb-12">
-      <a href="https://forms.gle/quazDYdTCs6sdQr89" target="_blank" class="inline-block bg-[#004e87] text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-[#003a6a] transition">आवेदन करें</a>
-    </section>
+<section class="text-center mb-12">
+  <a href="https://forms.gle/quazDYdTCs6sdQr89" target="_blank"
+     id="applyBtn"
+     class="inline-block bg-[#004e87] text-white px-8 py-3 rounded-lg font-semibold shadow
+            hover:bg-[#003a6a] transition-colors transition-transform duration-1000 ease-in-out
+            animate-zoomInOut hover:scale-110 transform"
+     onclick="vibrateDevice()">
+    आवेदन करें
+  </a>
+</section>
+
+<style>
+  @keyframes zoomInOut {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 4px 15px rgba(0, 78, 135, 0.4);
+    }
+    50% {
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(0, 78, 135, 0.7);
+    }
+  }
+
+  .animate-zoomInOut {
+    animation: zoomInOut 2s infinite ease-in-out;
+  }
+
+  /* Click animation effect */
+  #applyBtn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 8px rgba(0, 78, 135, 0.5);
+    transition: transform 0.1s ease;
+  }
+</style>
+
+<script>
+  function vibrateDevice() {
+    if (navigator.vibrate) {
+      navigator.vibrate(100);
+    }
+  }
+</script>
+
 
     <!-- Features -->
     <section class="mb-12 bg-[#f4be20] p-6 rounded-lg text-[#004e87] shadow-lg">
