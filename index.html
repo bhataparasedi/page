@@ -25,6 +25,28 @@
       color: #004e87;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+.trade {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: flyIn 0.8s forwards;
+  /* Optional: smooth shadow and background transitions on hover */
+  transition: box-shadow 0.3s ease;
+}
+
+/* Animation keyframes */
+@keyframes flyIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Staggered animation delays for each trade card */
+.trade:nth-child(1) { animation-delay: 0.1s; }
+.trade:nth-child(2) { animation-delay: 0.3s; }
+.trade:nth-child(3) { animation-delay: 0.5s; }
+.trade:nth-child(4) { animation-delay: 0.7s; }
+
   </style>
 </head>
 
@@ -40,33 +62,35 @@
   <main class="flex-grow container mx-auto px-4 py-8">
 
     <!-- Trades section -->
-    <section class="mb-12">
-      <h2 class="text-3xl font-semibold mb-6 border-b-4 border-[#f4be20] inline-block pb-2">
-        प्रशिक्षण ट्रेड
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
-          <h3 class="text-xl font-semibold mb-2">रिटेल मैनजमेंट</h3>
-          <p><strong>योग्यता:</strong> 12 वी</p>
-          <p><strong>अवधि:</strong> 3 माह</p>
-        </div>
-        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
-          <h3 class="text-xl font-semibold mb-2">ब्यूटिशियन (मेकअप आर्टिस्ट)</h3>
-          <p><strong>योग्यता:</strong> 10 वी</p>
-          <p><strong>अवधि:</strong> 3 माह</p>
-        </div>
-        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
-          <h3 class="text-xl font-semibold mb-2">इलेक्ट्रीशियन</h3>
-          <p><strong>योग्यता:</strong> 10 वी</p>
-          <p><strong>अवधि:</strong> 4 माह</p>
-        </div>
-        <div class="border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
-          <h3 class="text-xl font-semibold mb-2">डोमेस्टिक डाटा एंट्री (एम्प्लॉयब्लिटी स्किल्स)</h3>
-          <p><strong>योग्यता:</strong> ग्रेजुएट</p>
-          <p><strong>अवधि:</strong> 3 माह</p>
-        </div>
-      </div>
-    </section>
+   <!-- प्रशिक्षण ट्रेड सेक्शन -->
+<section class="mb-12">
+  <h2 class="text-3xl font-semibold mb-6 border-b-4 border-[#f4be20] inline-block pb-2">
+    प्रशिक्षण ट्रेड
+  </h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="trade border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+      <h3 class="text-xl font-semibold mb-2">रिटेल मैनजमेंट</h3>
+      <p><strong>योग्यता:</strong> 12 वी</p>
+      <p><strong>अवधि:</strong> 3 माह</p>
+    </div>
+    <div class="trade border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+      <h3 class="text-xl font-semibold mb-2">ब्यूटिशियन (मेकअप आर्टिस्ट)</h3>
+      <p><strong>योग्यता:</strong> 10 वी</p>
+      <p><strong>अवधि:</strong> 3 माह</p>
+    </div>
+    <div class="trade border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+      <h3 class="text-xl font-semibold mb-2">इलेक्ट्रीशियन</h3>
+      <p><strong>योग्यता:</strong> 10 वी</p>
+      <p><strong>अवधि:</strong> 4 माह</p>
+    </div>
+    <div class="trade border border-[#004e87] rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
+      <h3 class="text-xl font-semibold mb-2">डोमेस्टिक डाटा एंट्री (एम्प्लॉयब्लिटी स्किल्स)</h3>
+      <p><strong>योग्यता:</strong> ग्रेजुएट</p>
+      <p><strong>अवधि:</strong> 3 माह</p>
+    </div>
+  </div>
+</section>
+
 <!-- Apply Button -->
     <section class="text-center mb-12">
       <a href="https://forms.gle/quazDYdTCs6sdQr89" target="_blank" class="inline-block bg-[#004e87] text-white px-8 py-3 rounded-lg font-semibold shadow hover:bg-[#003a6a] transition">आवेदन करें</a>
