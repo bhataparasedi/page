@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=10" />
   <title>SEDI प्रशिक्षण संस्था</title>
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -49,13 +49,23 @@
 
   </style>
 </head>
+<header class="w-full bg-white text-[#004e87] shadow-md p-4">
+  <div class="flex flex-col sm:flex-row items-center sm:justify-between">
+    <!-- Logo -->
+    <div class="mb-2 sm:mb-0 sm:mr-6">
+      <img src="https://i.postimg.cc/Pq33cJqs/Foundation-Logo-removebg-preview.png" 
+           alt="SEDI Logo" class="h-16 sm:h-16" />
+    </div>
 
-<body class="min-h-screen flex flex-col">
-
- <header class="bg-white text-[#004e87] flex items-center p-4">
-  <img src="https://i.postimg.cc/Pq33cJqs/Foundation-Logo-removebg-preview.png" alt="SEDI Logo" class="h-8 mr-4" />
-  <h1 class="text-2xl font-bold">कौशल एवं उद्यमिता विकास संस्थान (SEDI)</h1>
+    <!-- Heading -->
+ <h1 class="text-2xl sm:text-4xl font-bold text-center w-full">
+      कौशल एवं उद्यमिता विकास संस्थान (सेडी)
+    </h1>
+  </div>
 </header>
+
+
+
 
 
   <!-- Main content -->
@@ -456,7 +466,7 @@ body {
 }
 
 .about-title {
-
+	 text-align: center;
 	font-size: 7.5rem;
 	font-weight: 900;
 	text-transform: uppercase;
@@ -869,20 +879,53 @@ observer.observe(teamSection);
 
 </script>
   </div>
-</section>
-
-
-
+</section>  
 
    <!-- Contact & Location -->
-    <section class="mb-12 bg-white rounded-lg shadow-lg p-6 text-[#004e87]">
-      <h2 class="text-3xl font-semibold mb-4 border-b-4 border-[#f4be20] inline-block pb-2">संपर्क करें</h2>
-      <p>SEDI, पंचम दीवान स्कूल के अंदर, सेंट मैरी स्कूल रोड, भाटापारा (छ.ग.)</p>
-      <p>फोन नंबर: 7089019505, 9098968001, 8269351561, 9826161984</p>
-      <div class="mt-6">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.407269307625!2d81.94871827598259!3d21.725731163474503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a286149c76282a1%3A0x8fca9aa020d9f54b!2sSEDI%20BHATAPARA!5e0!3m2!1sen!2sin!4v1749468492910!5m2!1sen!2sin" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+   <section class="mb-12 bg-gradient-to-r from-[#004e87] to-[#007bb5] text-white p-10">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-center">
+    
+    <!-- Left -->
+    <div>
+      <h2 class="text-3xl font-semibold mb-6 border-b-4 border-[#f4be20] inline-block pb-2">संपर्क करें</h2>
+      
+      <!-- Address -->
+      <div class="flex items-start gap-3 mb-4 text-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#f4be20] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3z"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4.5 8-11a8 8 0 10-16 0c0 6.5 8 11 8 11z"/>
+        </svg>
+        <p>SEDI, पंचम दीवान स्कूल के अंदर,<br>सेंट मैरी स्कूल रोड, भाटापारा (छ.ग.)</p>
       </div>
-    </section>
+
+      <!-- Phone 1 -->
+      <div class="flex items-center gap-3 mb-2 text-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#f4be20] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.516 4.55a1 1 0 01-.272.99L9.414 11a16.001 16.001 0 006.586 6.586l1.776-1.776a1 1 0 01.99-.272l4.55 1.516a1 1 0 01.684.95V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z"/>
+        </svg>
+        <p>फोन नंबर: 7089019505, 9098968001</p>
+      </div>
+
+      <!-- Phone 2 -->
+      <div class="flex items-center gap-3 text-xl">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-[#f4be20] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.684l1.516 4.55a1 1 0 01-.272.99L9.414 11a16.001 16.001 0 006.586 6.586l1.776-1.776a1 1 0 01.99-.272l4.55 1.516a1 1 0 01.684.95V19a2 2 0 01-2 2h-1C9.163 21 3 14.837 3 7V5z"/>
+        </svg>
+        <p>8269351561, 9826161984</p>
+      </div>
+    </div>
+    
+    <!-- Right (Map) -->
+    <div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3706.407269307625!2d81.94871827598259!3d21.725731163474503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a286149c76282a1%3A0x8fca9aa020d9f54b!2sSEDI%20BHATAPARA!5e0!3m2!1sen!2sin!4v1749468492910!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        width="100%" height="350"
+        class="rounded-lg shadow-lg"
+        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+    </div>
+  </div>
+</section>
+
   </main>
 
   <!-- Footer -->
