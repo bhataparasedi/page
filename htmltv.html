@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEDI Training Slideshow</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html, body {
+    margin:0; padding:0; overflow:hidden; height:100%; width:100%;
+    font-family:sans-serif;
+  }
+  .slide {
+    position:absolute; top:0; left:0;
+    width:100%; height:100%;
+    display:flex; flex-direction:column;
+    justify-content:center; align-items:center;
+    text-align:center;
+    opacity:0; transition: opacity 1s ease-in-out;
+    background-size: cover; background-position: center;
+    padding:2rem; color:white; z-index:0;
+  }
+  .active { opacity:1; z-index:1; }
+
+  .overlay {
+    position:absolute; top:0; left:0; width:100%; height:100%;
+    background-color: rgba(0,0,0,0.5); z-index:0;
+  }
+
+  .slide-content > * {
+    transform: translateY(30px); opacity:0;
+    transition: transform 1s ease, opacity 1s ease; z-index:10;
+  }
+  .active .slide-content > * { transform: translateY(0); opacity:1; }
+
+  #typingText::after { content:'|'; animation: blink 1s infinite; }
+  @keyframes blink { 0%,50%,100%{ opacity:1; } 25%,75%{ opacity:0; } }
+
+  /* Ken Burns zooms */
+  @keyframes zoom1 {0%{transform:scale(1);}100%{transform:scale(1.05);}}
+  @keyframes zoom2 {0%{transform:scale(1);}100%{transform:scale(1.08);}}
+  @keyframes zoom3 {0%{transform:scale(1);}100%{transform:scale(1.04);}}
+  @keyframes zoom4 {0%{transform:scale(1);}100%{transform:scale(1.06);}}
+  @keyframes zoom5 {0%{transform:scale(1);}100%{transform:scale(1.05);}}
+  @keyframes zoom6 {0%{transform:scale(1);}100%{transform:scale(1.07);}}
+  @keyframes zoom7 {0%{transform:scale(1);}100%{transform:scale(1.05);}}
+  @keyframes zoom8 {0%{transform:scale(1);}100%{transform:scale(1.06);}}
+
+  .slide[data-zoom="1"] { animation: zoom1 15s ease-in-out infinite alternate; }
+  .slide[data-zoom="2"] { animation: zoom2 18s ease-in-out infinite alternate; }
+  .slide[data-zoom="3"] { animation: zoom3 16s ease-in-out infinite alternate; }
+  .slide[data-zoom="4"] { animation: zoom4 17s ease-in-out infinite alternate; }
+  .slide[data-zoom="5"] { animation: zoom5 15s ease-in-out infinite alternate; }
+  .slide[data-zoom="6"] { animation: zoom6 18s ease-in-out infinite alternate; }
+  .slide[data-zoom="7"] { animation: zoom7 16s ease-in-out infinite alternate; }
+  .slide[data-zoom="8"] { animation: zoom8 17s ease-in-out infinite alternate; }
+
+  /* Buttons */
+  .nav-btn {
+    position:absolute; top:50%; transform:translateY(-50%);
+    background: rgba(255,255,255,0.7); color:#004e87;
+    font-weight:bold; padding:1rem 2rem; border-radius:0.75rem;
+    cursor:pointer; z-index:20; user-select:none;
+    transition: transform 0.3s, background 0.3s;
+  }
+  .nav-btn:hover { transform:translateY(-50%) scale(1.1); background: rgba(255,255,255,0.9); }
+  #prevBtn { left:2rem; }
+  #nextBtn { right:2rem; }
+</style>
+</head>
+<body>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop autoplay>
+  <source src="placeholder-music.mp3" type="audio/mpeg">
+  आपका ब्राउज़र ऑडियो टैग सपोर्ट नहीं करता।
+</audio>
+
+<!-- Slide Transition Sound -->
+<audio id="slideSound">
+  <source src="slide-sound.mp3" type="audio/mpeg">
+</audio>
+
+<section id="slideshow" class="w-screen h-screen relative overflow-hidden">
+  <!-- Slide 1 -->
+ <div class="slide active" data-zoom="1" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1350&q=80');">
+  <!-- Overlay with gradient for vibrant effect -->
+  <div class="overlay" style="background: linear-gradient(rgba(0,78,135,0.6), rgba(0,78,135,0.3)); position:absolute; inset:0;"></div>
+  
+  <div class="slide-content flex flex-col items-center justify-center w-full h-full px-8 text-center text-white space-y-8">
+    
+    <!-- Logo with white background and pulse animation -->
+    <div class="w-52 h-52 mb-4 rounded-full overflow-hidden shadow-2xl bg-white flex items-center justify-center animate-pulse">
+      <img src="https://i.postimg.cc/Pq33cJqs/Foundation-Logo-removebg-preview.png" alt="SEDI Logo" class="w-40 h-40 object-contain">
+    </div>
+    
+    <!-- Hero Heading (Static) -->
+    <h1 class="text-7xl md:text-8xl font-extrabold text-yellow-400 drop-shadow-lg">
+      कौशल एवं उद्यमिता विकास संस्थान (सेडी)
+    </h1>
+    
+  </div>
+</div>
+
+<style>
+/* Pulse animation for logo */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+</style>
+
+
+  <!-- Slide 2 -->
+<div class="slide" data-zoom="3" style="">
+  <!-- Overlay -->
+  <div class="overlay" style="background-color: rgba(0, 78, 135, 0.85); position:absolute; inset:0;"></div>
+
+  <!-- Slide Content -->
+  <div class="slide-content flex flex-col items-center justify-start w-full h-screen px-8 py-6 relative z-10">
+    
+    <!-- Slide Title -->
+    <h2 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl font-bold mb-6 mt-4 text-[#FFD700] text-center drop-shadow-lg">
+      प्रशिक्षण ट्रेड्स
+    </h2>
+
+    <!-- 2x2 Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full max-w-7xl">
+      
+      <!-- Beautician -->
+      <div class="bg-white bg-opacity-20 rounded-2xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 h-[380px]">
+        <img src="https://i.postimg.cc/9MwWhN7V/Whats-App-Image-2025-09-13-at-10-14-55-AM-1.jpg" class="w-full h-56 md:h-60 lg:h-64 object-cover rounded-xl mb-4 shadow-lg">
+        <h3 class="font-extrabold text-2xl md:text-3xl lg:text-4xl mb-2" style="color:#FFD700;">ब्यूटीशियन</h3>
+        <p class="text-lg md:text-xl lg:text-2xl" style="color:#FFD700;">योग्यता: 10वीं | अवधि: 3 माह</p>
+      </div>
+      
+      <!-- Retail Management -->
+      <div class="bg-white bg-opacity-20 rounded-2xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 h-[380px]">
+        <img src="https://i.postimg.cc/GtbSQ4rN/Whats-App-Image-2024-11-11-at-3-43-39-PM-2.jpg" class="w-full h-56 md:h-60 lg:h-64 object-cover rounded-xl mb-4 shadow-lg">
+        <h3 class="font-extrabold text-2xl md:text-3xl lg:text-4xl mb-2" style="color:#FFD700;">रिटेल मैनेजमेंट</h3>
+        <p class="text-lg md:text-xl lg:text-2xl" style="color:#FFD700;">योग्यता: 12वीं | अवधि: 3 माह</p>
+      </div>
+      
+      <!-- Electrician -->
+      <div class="bg-white bg-opacity-20 rounded-2xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 h-[380px]">
+        <img src="https://i.postimg.cc/hjL5TLFT/Whats-App-Image-2024-05-31-at-17-03-34-2.jpg" class="w-full h-56 md:h-60 lg:h-64 object-cover rounded-xl mb-4 shadow-lg">
+        <h3 class="font-extrabold text-2xl md:text-3xl lg:text-4xl mb-2" style="color:#FFD700;">इलेक्ट्रीशियन</h3>
+        <p class="text-lg md:text-xl lg:text-2xl" style="color:#FFD700;">योग्यता: 10वीं | अवधि: 4 माह</p>
+      </div>
+      
+      <!-- Digital Mitra -->
+      <div class="bg-white bg-opacity-20 rounded-2xl p-6 shadow-2xl hover:scale-105 transform transition duration-500 h-[380px]">
+        <img src="https://i.postimg.cc/qRVFNmFp/Whats-App-Image-2025-05-24-at-3-13-50-PM.jpg" class="w-full h-56 md:h-60 lg:h-64 object-cover rounded-xl mb-4 shadow-lg">
+        <h3 class="font-extrabold text-2xl md:text-3xl lg:text-4xl mb-2" style="color:#FFD700;">डिजिटल मित्र</h3>
+        <p class="text-lg md:text-xl lg:text-2xl" style="color:#FFD700;">योग्यता: Graduate | अवधि: 3 माह</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Slide 3 -->
+<div class="slide" data-zoom="3" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1350&q=80');">
+  <div class="overlay" style="background-color: rgba(0,0,0,0.5); position:absolute; inset:0;"></div>
+  <div class="slide-content flex flex-col items-center justify-center w-full h-full px-8 relative z-10">
+    
+    <h2 class="text-5xl font-semibold mb-8 text-white">प्रशिक्षण गतिविधियाँ / इवेंट्स</h2>
+    
+    <!-- Activity Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+      
+      <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center text-2xl text-white flex flex-col items-center">
+        पर्सनालिटी डेवलपमेंट
+        <img src="https://i.postimg.cc/tJDvm94g/IMG-20241003-WA0023-1.jpg" 
+             alt="Personality Development" class="  mt-4 w-full h-100 object-cover rounded-lg shadow-lg">
+      </div>
+      
+      <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center text-2xl text-white flex flex-col items-center">
+        बेसिक कंप्यूटर कौशल
+        <img src="https://images.unsplash.com/photo-1581090700227-6b3c5d92bb47?auto=format&fit=crop&w=400&q=60" 
+             alt="Basic Computer" class="  mt-4 w-full h-100 object-cover rounded-lg shadow-lg">
+      </div>
+      
+      <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center text-2xl text-white flex flex-col items-center">
+        इंडस्ट्रियल विजिट्स
+        <img src="https://i.postimg.cc/GtqrJw0F/ddd.jpg" 
+             alt="Industrial Visit" class="  mt-4 w-full h-100 object-cover rounded-lg shadow-lg">
+      </div>
+      
+      <div class="bg-white bg-opacity-20 rounded-xl p-6 text-center text-2xl text-white flex flex-col items-center">
+        टूल किट / ड्रेस किट प्रदान
+        <img src="https://images.unsplash.com/photo-1581091870621-5f2f7f1b9d37?auto=format&fit=crop&w=400&q=60" 
+             alt="Tool Kit" class="  mt-4 w-full h-100 object-cover rounded-lg shadow-lg">
+      </div>
+
+    </div>
+           
+  </div>
+</div>
+
+
+  <!-- Slide 4 -->
+ <div class="slide" data-zoom="4" style="background-image:url('https://images.unsplash.com/photo-1581091870621-5f2f7f1b9d37?auto=format&fit=crop&w=1350&q=80');">
+  <!-- Overlay for readability -->
+  <div class="overlay" style="background-color: rgba(0,0,0,0.5); position:absolute; inset:0;"></div>
+  
+  <div class="slide-content relative z-10 flex flex-col items-center justify-center w-full h-full px-12 py-16 text-center text-white space-y-12">
+    
+    <!-- Slide Title -->
+    <h2 class="text-6xl font-extrabold mb-12 drop-shadow-lg">सर्टिफिकेट / उपलब्धियाँ</h2>
+    
+    <!-- Certificates Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-6xl">
+      
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
+        <img src="https://i.postimg.cc/wMT3dkgk/updated.jpg" class="w-full h-full object-cover">
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
+        <img src="https://www.slideegg.com/wp-content/uploads/2020/06/Certificate-PPT-Template-and-Google-Slides-Themes.jpg" alt="Free Certificate" class="w-full h-full object-cover">
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500">
+        <img src="https://slidemodel.com/wp-content/uploads/2020/12/formal-certificate-powerpoint-templates-16x9.jpg" alt="Formal Certificate" class="w-full h-full object-cover">
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+  <!-- Slide 6 -->
+  <div class="slide" data-zoom="6" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80');">
+  <!-- Overlay for readability -->
+  <div class="overlay" style="background-color: rgba(0,0,0,0.6); position:absolute; inset:0;"></div>
+  
+  <div class="slide-content relative z-10 flex flex-col items-center justify-center w-full h-full px-12 py-12 text-center text-white">
+    
+    <h2 class="text-5xl font-bold mb-12">प्रशिक्षार्थियों की प्रतिक्रिया</h2>
+    
+    <!-- Feedback Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+      
+      <!-- Card 1 -->
+      <div class="bg-white bg-opacity-10 rounded-xl p-6 shadow-lg">
+        <p class="text-2xl italic mb-4">"इलेक्ट्रिशियन प्रशिक्षण ने मुझे नई दिशा दी। अपनी प्लेसमेंट से मैं बेहद खुश हूँ। इस मुकाम तक पहुँचने में फैकल्टी और मोबिलाइज़र की भूमिका के लिए मैं SEDI का धन्यवाद करता हूँ।"</p>
+        <p class="font-semibold text-xl text-right">- हेम कुमार साहू</p>
+      </div>
+      
+      <!-- Card 2 -->
+      <div class="bg-white bg-opacity-10 rounded-xl p-6 shadow-lg">
+        <p class="text-2xl italic mb-4">"SEDI में मिले प्रैक्टिकल प्रशिक्षण सत्र उद्योग की आवश्यकताओं को समझने में बेहद मददगार रहे। उन्हें INDO MIM जैसी प्रतिष्ठित कंपनी में काम करने का अवसर मिला, जिसके लिए उन्होंने केंद्र का धन्यवाद किया।"</p>
+        <p class="font-semibold text-xl text-right">- बसंत ध्रुव</p>
+      </div>
+      
+      <!-- Card 3 -->
+      <div class="bg-white bg-opacity-10 rounded-xl p-6 shadow-lg">
+        <p class="text-2xl italic mb-4">"मैंने प्रशिक्षण कार्यक्रम के दौरान प्राप्त करियर गाइडेंस और समर्थन की बहुत सराहना की। SEDI द्वारा इंटरव्यू आयोजित करने और पारदर्शी संवाद बनाए रखने के प्रयासों ने मुझे आत्मविश्वास के साथ नौकरी पाने में मदद की।"</p>
+        <p class="font-semibold text-xl text-right">- राजा निषाद</p>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+
+  <!-- Slide 7 -->
+ <div class="slide" data-zoom="7" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80');">
+  <div class="overlay" style="background-color: rgba(0,0,0,0.5); position:absolute; inset:0;"></div>
+  <div class="slide-content flex flex-col items-center justify-center w-full h-full px-8 py-12 text-center text-white space-y-6">
+    
+    <!-- Motivational line -->
+    <h3 class="text-3xl md:text-4xl font-semibold mb-4">आधुनिक कौशल सीखें और अपने सपनों को साकार करें – आज ही SEDI में जुड़ें!</h3>
+    
+    <!-- Typing Text (optional) -->
+    <h2 id="typingText" class="text-4xl font-bold mb-6"></h2>
+    
+    <!-- Apply Button -->
+    <a href="https://forms.gle/quazDYdTCs6sdQr89" target="_blank"
+       class="bg-white text-[#004e87] px-12 py-5 rounded-xl font-bold shadow-lg
+              hover:bg-gray-200 transition transform hover:scale-110 duration-500">
+      आवेदन करें
+    </a>
+    
+  </div>
+</div>
+
+
+  <!-- Slide 8 -->
+  <div class="slide" data-zoom="8" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1350&q=80');">
+  <!-- Overlay for readability -->
+  <div class="overlay" style="background-color: rgba(0,0,0,0.6); position:absolute; inset:0;"></div>
+
+  <div class="slide-content flex flex-col items-center justify-center w-full h-full px-16 py-16 text-center text-white space-y-8">
+    
+    <!-- Slide Title -->
+    <h2 class="text-6xl md:text-7xl font-extrabold mb-8">संपर्क करें</h2>
+    
+    <!-- Contact Information -->
+    <p class="text-4xl md:text-5xl mb-4 font-semibold">SEDI, पंचम दीवान स्कूल के अंदर,<br> भाटापारा (छ.ग.)</p>
+    <p class="text-4xl md:text-5xl mb-4 font-semibold">फोन: 7089019505 | 9098968001<br>8269351561 | 9826161984</p>
+    
+    <!-- Motivational Line -->
+    <p class="text-3xl md:text-4xl italic font-medium mt-6">आधुनिक कौशल सीखें और अपने सपनों को साकार करें – आज ही जुड़ें!</p>
+    
+    <!-- Footer -->
+    <p class="text-3xl md:text-4xl mt-6 font-light">© 2025 कौशल एवं उद्यमिता विकास संस्थान (सेडी)</p>
+    
+  </div>
+</div>
+
+
+  <!-- Navigation Buttons -->
+  <div id="prevBtn" class="nav-btn">Prev</div>
+  <div id="nextBtn" class="nav-btn">Next</div>
+</section>
+
+<script>
+  const slides = document.querySelectorAll(".slide");
+  let current = 0;
+  const slideSound = document.getElementById("slideSound");
+
+  function showSlide(index) {
+    slides.forEach(s => s.classList.remove("active"));
+    slides[index].classList.add("active");
+    slideSound.currentTime = 0;
+    slideSound.volume = 0.2;
+    slideSound.play();
+  }
+
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  });
+
+  document.getElementById("nextBtn").addEventListener("click", () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  });
+
+  // Typing effect
+  const typingText = document.getElementById("typingText");
+  const text = "क्लिक करें 👇";
+  let index = 0;
+  function typeWriter() {
+    if(index < text.length) {
+      typingText.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeWriter, 150);
+    } else {
+      setTimeout(() => { typingText.innerHTML=""; index=0; typeWriter(); }, 2000);
+    }
+  }
+  typeWriter();
+
+  // Background music fade-in
+  const bgMusic = document.getElementById("bgMusic");
+  bgMusic.volume = 0;
+  let vol = 0;
+  const fadeIn = setInterval(() => {
+    if(vol < 0.5){ vol += 0.01; bgMusic.volume = vol; } 
+    else clearInterval(fadeIn);
+  }, 200);
+</script>
+
+</body>
+</html>
