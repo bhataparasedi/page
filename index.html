@@ -55,18 +55,8 @@
   .slide[data-zoom="7"] { animation: zoom7 16s ease-in-out infinite alternate; }
   .slide[data-zoom="8"] { animation: zoom8 17s ease-in-out infinite alternate; }
 
-  /* Buttons */
-  .nav-btn {
-    position:absolute; top:50%; transform:translateY(-50%);
-    background: rgba(255,255,255,0.7); color:#004e87;
-    font-weight:bold; padding:1rem 2rem; border-radius:0.75rem;
-    cursor:pointer; z-index:20; user-select:none;
-    transition: transform 0.3s, background 0.3s;
-  }
-  .nav-btn:hover { transform:translateY(-50%) scale(1.1); background: rgba(255,255,255,0.9); }
-  #prevBtn { left:2rem; }
-  #nextBtn { right:2rem; }
-</style>
+ 
+ </style>
 </head>
 <body>
 
@@ -322,9 +312,7 @@
 </div>
 
 
-  <!-- Navigation Buttons -->
-  <div id="prevBtn" class="nav-btn">Prev</div>
-  <div id="nextBtn" class="nav-btn">Next</div>
+
 </section>
 
 <script>
@@ -340,15 +328,12 @@
     slideSound.play();
   }
 
-  document.getElementById("prevBtn").addEventListener("click", () => {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-  });
+ // Auto slide change every 8 seconds
+setInterval(() => {
+  current = (current + 1) % slides.length;
+  showSlide(current);
+}, 8000);
 
-  document.getElementById("nextBtn").addEventListener("click", () => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  });
 
   // Typing effect
   const typingText = document.getElementById("typingText");
